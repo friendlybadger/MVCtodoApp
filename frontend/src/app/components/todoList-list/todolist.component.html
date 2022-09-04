@@ -1,0 +1,40 @@
+<mat-toolbar color="primary"> CRUD Operations</mat-toolbar>
+<h1 
+    style="
+    text-align: center; 
+    font-size: 48px;
+    font-weight:bold;
+    margin-top:100px;"
+>TodoList List</h1>
+
+<mat-card style="width:50%; margin: auto;"> 
+<button (click)="post(todolistInput.value)" 
+    mat-fab color="primary" 
+    style="float:right;">
+    <mat-icon>add</mat-icon>
+
+</button>
+<mat-form-field style="width:100%">
+    <mat-label>To do list task</mat-label>
+    <input #todolistInput matInput placeholder="EX. Wash Car">
+</mat-form-field>
+<mat-list>
+    <mat-list-item *ngFor="let todolist of todolist$ | async">
+        <span style="font-weight:bold;">
+            {{todolist.id}}. {{todolist.item}}</span>
+            <span style="position: absolute; right: 0;">
+                <button mat-icon-button>
+                    <mat-icon (click)="update(todolist.id, todolistInput.value)" color="primary">
+                        edit
+                    </mat-icon>
+                </button>
+                <button (click)="delete(todolist.id)" mat-icon-button>
+                    <mat-icon color="warn">
+                        delete
+                    </mat-icon>
+                </button>
+
+            </span>
+    </mat-list-item>
+</mat-list>
+</mat-card>

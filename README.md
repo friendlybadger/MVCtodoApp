@@ -24,7 +24,7 @@ The web application allows the user to Create,Update,Delete items on to the shop
 Set up MySQL Workbench and run the database schema located "DatabaseSchema.txt".
     
 Change *"backend/config/config.json"* and change the password to your **MySQL password**.
-file located here[config.json](backend/config/config.json)
+file located here [config.json](backend/config/config.json)
 ```json
     {
         "host": "localhost",

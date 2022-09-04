@@ -1,4 +1,3 @@
 #file/s for git to ignore
-/flaskBlog/website/database.db
 /backend/config/config.json
 /frontend/.angular/cache

@@ -1,4 +1,3 @@
-# IT-Projects
 ## MVC_CRUD_REST
 ### About the Poject
 The project MVC_CRUD_REST is a simple Grocery shopping list.
